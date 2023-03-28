@@ -32,11 +32,11 @@ Passo a passo para instalação e configuração do projeto.
 
 SSH:
 ```bash
-  git clone git@github.com:onoue9/Country-challenge.git
+  git clone git@github.com:onoue9/country-challenge.git
 ```
 HTTPS:
 ```bash
-  git clone https://github.com/onoue9/Country-challenge.git
+  git clone https://github.com/onoue9/country-challenge.git
 ```
 
 ### 2. Instale as dependências
