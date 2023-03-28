@@ -128,16 +128,24 @@ const BorderSpan = styled.span`
 `
 
 interface Country {
-  name: { common: string; }
+  name: { common: string, official: string, nativeName: { [key: string]: { official: string, common: string } } },
   population: number;
-  flags: { svg: string; }
+  flags: { svg: string, png: string };
+  region: string;
+  subregion: string;
+  capital: string[];
+  topLevelDomain: string[];
+  currencies: { [key: string]: { name: string, symbol: string } };
+  languages: { [key: string]: string };
+  borders: string[];
+  tld: string[];
 }
 
 export default function Country() {
   const router = useRouter();
   const { name } = router.query;
   const nameString = querystring.stringify({ name }).replace('name=', '');
-  const [country, setCountry] = useState();
+  const [country, setCountry] = useState<Country>();
   const [windowWidth, setWindowWidth] = useState<number>(0);
   const arrowLeftIcon: IconProp = faArrowLeft;
 
@@ -187,7 +195,7 @@ export default function Country() {
         <CountryDiv>
           <div>
             <Image
-              src={country?.flags.svg}
+              src={country?.flags.svg || ''}
               alt={`'bandeira da' ${country?.name.common}`}
               width={windowWidth > 1023 ? 560 : 358}
               height={windowWidth > 1023 ? 401 : 220}
@@ -205,7 +213,7 @@ export default function Country() {
               <span><strong>Sub-região:</strong> {country?.subregion}</span>
               <span><strong>Capital:</strong> {country?.capital}</span>
               <span><strong>TLD:</strong> {country?.tld.map((tld: string) => tld)}</span>
-              <span><strong>Moeda:</strong> {country && Object.values(country?.currencies).map((currency: string) => currency.name )}</span>
+              <span><strong>Moeda:</strong> {country && Object.values(country?.currencies).map((currency: { name: string, symbol: string }) => currency.name )}</span>
               <span><strong>Idiomas:</strong> {country && Object.values(country?.languages).map((language: string) => language )}</span>
             </CountryDescDiv>
             <BorderSpan style={{ paddingLeft: "2rem"}}><strong>Fronteira:</strong> {country?.borders ? country?.borders.map((border: string, index: number) => {
