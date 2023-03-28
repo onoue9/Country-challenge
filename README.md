@@ -1,38 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Country Challenge
 
-First, run the development server:
+Projeto desenvolvido para o processo seletivo para vaga de Front-end ReactJs/NextJs Jr Presencial.
 
+Onde desenvolvemos uma aplicação que consumia uma API que fornecia informações de todos os países, e rederizamos card com essas informações,
+podendo clicar no card de um país e abrir uma página com mais informações sobre o país.
+
+## Demonstração
+
+Tela dos países
+
+![alt text](https://cdn.discordapp.com/attachments/851591758211055627/1090376067065335848/image.png)
+
+Tela de detalhes
+
+![alt text](https://cdn.discordapp.com/attachments/851591758211055627/1090376257176342548/image.png)
+
+Link para Demo:
+
+
+
+## Instalação
+
+Passo a passo para instalação e configuração do projeto.
+
+## Pré-requisitos
+
+- Node.js e NPM/Yarn instalados
+
+### 1. Faça o clone do repositório
+
+SSH:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+  git clone git@github.com:onoue9/Country-challenge.git
+```
+HTTPS:
+```bash
+  git clone https://github.com/onoue9/Country-challenge.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Instale as dependências
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Você precisará entrar em cada diretório, tanto do frontend como do backend para instalar as dependências
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+  npm install
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### 3. Inicie o servidor
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+  npm run dev
+```
 
-## Learn More
+## Stacks utilizadas
 
-To learn more about Next.js, take a look at the following resources:
+**Front-end:** React.js, Typescript, Styled Components, NextJs, Axios.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
